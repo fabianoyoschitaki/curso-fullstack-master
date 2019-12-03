@@ -55,3 +55,17 @@ console.log(calculadora(10, adicao, 5))
 console.log(calculadora(10, subtracao, 5))
 console.log(calculadora(10, multiplicacao, 5))
 console.log(calculadora(10, divisao, 5))
+
+const calculadoraFn = (num1, op, num2) => {
+    const ops = {
+        '+': (num1, num2) => num1 + num2,
+        '-': (num1, num2) => num1 - num2,
+        '*': (num1, num2) => num1 * num2,
+        '/': (num1, num2) => num1 / num2
+    }
+    return ops[op](num1, num2)
+}
+console.log(calculadoraFn(10, '+', 5))
+console.log(calculadoraFn(10, '-', 5))
+console.log(calculadoraFn(10, '*', 5))
+console.log(calculadoraFn(10, '/', 5))
